@@ -14,6 +14,7 @@
         $numeroInterior = $row['numero_interior'];
         $colonia = $row['colonia'];
         $cp = $row['codigo_postal'];
+        $descripcion = $row['descripcion'];
     }
 
     if (isset($_POST['update'])) {
@@ -126,7 +127,7 @@
                             </div>
                             <div class="mb-md-2 mt-md-2 pb-2">
                                 <h6 class="fw-bold mb-2">Descripción</h6>
-                                <textarea name="nueva_descripcion" rows="2" class="form-control" placeholder="Descripción"></textarea>
+                                <textarea name="nueva_descripcion" rows="2" class="form-control" placeholder="Descripción"><?php echo $descripcion; ?></textarea>
                             </div>
                             <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name="update">Actualizar</button>
                         </form>
