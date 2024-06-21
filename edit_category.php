@@ -51,7 +51,7 @@
                     <div class="card-body p-5 text-center">
                         <form action="edit_category.php?id_categoria=<?php echo $_GET['id_categoria']?>" method="POST">
                             <div class="mb-md-5 mt-md-4 pb-5">
-                                <h6 class="fw-bold mb-2 text-uppercase">Actualizar nombre</h6>
+                                <h6 class="fw-bold mb-2">Actualizar categoría</h6>
                                 <input type="text" name="nuevo_nombre" value="<?php echo $nombre; ?>" class="form-control" placeholder="Actualiza el nombre">
                             </div>
                             <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name="update">Actualizar</button>

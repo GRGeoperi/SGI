@@ -48,19 +48,51 @@ include("includes/headerAdmin.php");
                 <div class="card bg-dark text-white" style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center">
                         <form action="edit_user.php?id_usuario=<?php echo $_GET['id_usuario'] ?>" method="POST">
-                            <div class="mb-md-5 mt-md-4 pb-5">
-                                <h6 class="fw-bold mb-2 text-uppercase">Actualizar rol</h6>
-                                <input type="text" name="nuevo_rol_id" value="<?php echo $rol; ?>" class="form-control" placeholder="Actualiza el rol">
-                                <br>
-                                <p class="text-white-50 mb-1">Recuerda:</p>
-                                <p class="text-white-50 mb-0">1 = Administrador</p>
-                                <p class="text-white-50 mb-0">2 = Almacenero</p>
-                                <p class="text-white-50 mb-0">3 = Vendedor</p>
+                            <div class="mb-md-2 mt-md-2 pb-2">
+                                <h6 class="fw-bold mb-2">Actualizar rol</h6>
+                                <input type="text" name="nuevo_rol_id" value="<?php echo $rol; ?>" class="form-control" placeholder="Identificador en la tabla de abajo">
                             </div>
                             <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name="update">Actualizar</button>
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container px-4 py-1 px-md-1 text-center text-lg-start my-1">
+        <div class="row gx-lg-1 align-items-center mb-1">
+            <div class="col-lg-6 mb-1 mb-lg-0" style="z-index: 10">
+                <table class="table table-striped align-middle mb-5">
+                    <thead class="bg-light">
+                        <tr class="table-dark">
+                            <th>Identificador</th>
+                            <th>Nombre de rol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $consultaTablaRol = "SELECT * FROM rol";
+                        $resultadoRol = mysqli_query($conexion, $consultaTablaRol);
+                        while ($row = mysqli_fetch_array($resultadoRol)) { ?>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="ms-3">
+                                            <p class="text-muted mb-0"><?php echo $row['id'] ?></p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="ms-3">
+                                            <p class="text-muted mb-0"><?php echo $row['nombre'] ?></p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

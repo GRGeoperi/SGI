@@ -44,7 +44,7 @@
                                 <h6 class="fw-bold mb-2 text-uppercase">Agrega categoría</h6>
                                 <input type="text" name="nombre_categoria" class="form-control" placeholder="Nombre categoría">
                             </div>
-                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Actualizar</button>
+                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Añadir</button>
                         </form>
                     </div>
                 </div>

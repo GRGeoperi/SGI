@@ -98,7 +98,7 @@
                     <div class="card-body p-5 text-center">
                         <form action="edit_supplier.php?id_proveedor=<?php echo $_GET['id_proveedor']?>" method="POST">
                             <div class="mb-md-2 mt-md-2 pb-2">
-                                <h6 class="fw-bold mb-2">Actualizar nombre de negocio</h6>
+                                <h6 class="fw-bold mb-2">Nombre de negocio</h6>
                                 <input type="text" name="nuevo_nombre_negocio" value="<?php echo $nombre; ?>" class="form-control" placeholder="Nombre">
                             </div>
                             <div class="mb-md-2 mt-md-2 pb-2">

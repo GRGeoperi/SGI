@@ -72,7 +72,7 @@ if ($datosRecibidos) {
                                 <a class="dropdown-item" href="admin.php">Administrar usuarios</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="paginas_relacionadas.php">Ver permisos de roles</a>
+                                <a class="dropdown-item" href="paginas_relacionadas.php">Administrar páginas accesibles</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider" />
