@@ -35,20 +35,21 @@ include("base_datos.php");
                     $_SESSION['id'] = $id;
                     $_SESSION['username'] = $username;
                     header("Location: /experimentando/admin.php");
+                    exit();
                 }
                 if ($rol == "Almacenero")
                 {
                     $_SESSION['id'] = $id;
-                    $_SESSION['username'] = $username;
-                    // header("Location: respectiva_página.php");
+                    // $_SESSION['username'] = $username;
+                    // header("Location: /experimentando/storekeeper.php");
                     // exit();
                 }
                 if ($rol == "Vendedor")
                 {
                     $_SESSION['id'] = $id;
                     $_SESSION['username'] = $username;
-                    // header("Location: respectiva_página.php");
-                    // exit();
+                    header("Location: /experimentando/seller.php");
+                    exit();
                 }
             }
             else
