@@ -54,7 +54,6 @@ include("includes/headerAdmin.php");
             </div>
             <thead class="bg-light">
                 <tr class="table-dark">
-                    <th>Identificador</th>
                     <th>Nombre</th>
                     <th>Creacion</th>
                     <th>Acciones</th>
@@ -67,13 +66,6 @@ include("includes/headerAdmin.php");
                 $resultadoCategoria = mysqli_query($conexion, $consultaTablaCategoria);
                 while ($row = mysqli_fetch_array($resultadoCategoria)) { ?>
                     <tr>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <div class="ms-3">
-                                    <p class="text-muted mb-0"><?php echo $row['id_categoria'] ?></p>
-                                </div>
-                            </div>
-                        </td>
                         <td>
                             <div class="d-flex align-items-center">
                                 <div class="ms-3">

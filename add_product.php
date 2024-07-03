@@ -7,6 +7,7 @@ if (isset($_POST['submit'])) {
     $cantidadDisponible = $_POST['cantidad_disponible'];
     $cantidadMinima = $_POST['cantidad_minima'];
     $descripcion = $_POST['descripcion'];
+
     $validacion = isset($idPresentacion) && isset($idProveedor) && isset($nombreProducto)
         && isset($cantidadDisponible) && isset($cantidadMinima) && isset($descripcion);
     if ($validacion) {
@@ -69,89 +70,40 @@ include("includes/headerAdmin.php");
                                 <textarea name="descripcion" rows="2" class="form-control" placeholder="Descripción"></textarea>
                             </div>
                             <div class="mb-md-2 mt-md-2 pb-2">
-                                <h6 class="fw-bold mb-2">Identificador de presentación</h6>
-                                <input type="text" name="id_presentacion" class="form-control" placeholder="Identificador en la tabla de abajo" required>
+                                <h6 class="fw-bold mb-2">Presentación</h6>
+                                <select name="id_presentacion">
+                                    <?php
+                                    $consultaTablaPresentacion = "SELECT * FROM presentacion";
+                                    $resultadoPresentacion = mysqli_query($conexion, $consultaTablaPresentacion);
+                                    if (isset($resultadoPresentacion)) {
+                                        while ($row = mysqli_fetch_array($resultadoPresentacion)) {
+                                            echo '<option value="' . $row["id_presentacion"] . '">' . $row["nombre_presentacion"] . '</option>';
+                                        }
+                                    } else {
+                                        echo '<option value="">No hay datos disponibles</option>';
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="mb-md-2 mt-md-2 pb-2">
-                                <h6 class="fw-bold mb-2">Identificador de proveedor</h6>
-                                <input type="text" name="id_proveedor" class="form-control" placeholder="Identificador en la tabla de abajo" required>
+                                <h6 class="fw-bold mb-2">Proveedor</h6>
+                                <select name="id_proveedor">
+                                    <?php
+                                    $consultaTablaProveedor = "SELECT * FROM proveedor";
+                                    $resultadoProveedor = mysqli_query($conexion, $consultaTablaProveedor);
+                                    if (isset($resultadoProveedor)) {
+                                        while ($row = mysqli_fetch_array($resultadoProveedor)) {
+                                            echo '<option value="' . $row["id_proveedor"] . '">' . $row["nombre_negocio"] . '</option>';
+                                        }
+                                    } else {
+                                        echo '<option value="">No hay datos disponibles</option>';
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Añadir</button>
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container px-4 py-1 px-md-1 text-center text-lg-start my-1">
-        <div class="row gx-lg-1 align-items-center mb-5">
-            <div class="col-lg-6 mb-1 mb-lg-0" style="z-index: 10">
-                <table class="table table-striped align-middle mb-1">
-                    <thead class="bg-light">
-                        <tr class="table-dark">
-                            <th>Identificador</th>
-                            <th>Nombre presentación</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $usuarioId = $_SESSION['id'];
-                        $consultaTablaPresentacion = "SELECT * FROM presentacion";
-                        $resultadoPresentacion = mysqli_query($conexion, $consultaTablaPresentacion);
-                        while ($row = mysqli_fetch_array($resultadoPresentacion)) { ?>
-                            <tr>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <div class="ms-3">
-                                            <p class="text-muted mb-0"><?php echo $row['id_presentacion'] ?></p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <div class="ms-3">
-                                            <p class="text-muted mb-0"><?php echo $row['nombre_presentacion'] ?></p>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
-            </div><!---->
-            <div class="col-lg-6 mb-1 mb-lg-0 position-relative">
-                <div class="card-body px-4 py-1 px-md-1">
-                    <table class="table table-striped align-middle mb-1">
-                        <thead class="bg-light">
-                            <tr class="table-dark">
-                                <th>Identificador</th>
-                                <th>Nombre proveedor</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $consultaTablaProveedor = "SELECT id_proveedor, nombre_negocio FROM proveedor";
-                            $resultadoProveedor = mysqli_query($conexion, $consultaTablaProveedor);
-                            while ($row = mysqli_fetch_array($resultadoProveedor)) { ?>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <div class="ms-3">
-                                                <p class="text-muted mb-0"><?php echo $row['id_proveedor'] ?></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <div class="ms-3">
-                                                <p class="text-muted mb-0"><?php echo $row['nombre_negocio'] ?></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>

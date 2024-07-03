@@ -83,7 +83,19 @@
                             </div>
                             <div class="mb-md-2 mt-md-2 pb-2">
                                 <h6 class="fw-bold mb-2 text-uppercase">Asigna el rol permitido</h6>
-                                <input type="text" name="id_rol" class="form-control" placeholder="1=Administrador, 2=Almacenero, 3=Vendedor" required>
+                                <select name="id_rol">
+                                    <?php
+                                    $consultaTablaRol = "SELECT * FROM rol";
+                                    $resultadoRol = mysqli_query($conexion, $consultaTablaRol);
+                                    if (isset($resultadoRol)) {
+                                        while ($row = mysqli_fetch_array($resultadoRol)) {
+                                            echo '<option value="' . $row["id"] . '">' . $row["nombre"] . '</option>';
+                                        }
+                                    } else {
+                                        echo '<option value="">No hay datos disponibles</option>';
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Añadir</button>
                         </form>

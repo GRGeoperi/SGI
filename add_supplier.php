@@ -90,50 +90,24 @@ include("includes/headerAdmin.php");
                             </div>
                             <div class="mb-md-2 mt-md-2 pb-2">
                                 <h6 class="fw-bold mb-2">Identificador de categoría</h6>
-                                <input type="text" name="id_categoria" class="form-control" placeholder="Identificador en la tabla de abajo" required>
+                                <select name="id_categoria">
+                                    <?php
+                                    $consultaTablaCategoria = "SELECT * FROM categoria";
+                                    $resultadoCategoria = mysqli_query($conexion, $consultaTablaCategoria);
+                                    if (isset($resultadoCategoria)) {
+                                        while ($row = mysqli_fetch_array($resultadoCategoria)) {
+                                            echo '<option value="' . $row["id_categoria"] . '">' . $row["nombre"] . '</option>';
+                                        }
+                                    } else {
+                                        echo '<option value="">No hay datos disponibles</option>';
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Añadir</button>
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container px-4 py-1 px-md-1 text-center text-lg-start my-1">
-        <div class="row gx-lg-1 align-items-center mb-1">
-            <div class="col-lg-6 mb-1 mb-lg-0" style="z-index: 10">
-                <table class="table table-striped align-middle mb-5">
-                    <thead class="bg-light">
-                        <tr class="table-dark">
-                            <th>Identificador</th>
-                            <th>Nombre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $usuarioId = $_SESSION['id'];
-                        $consultaTablaCategoria = "SELECT * FROM categoria";
-                        $resultadoCategoria = mysqli_query($conexion, $consultaTablaCategoria);
-                        while ($row = mysqli_fetch_array($resultadoCategoria)) { ?>
-                            <tr>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <div class="ms-3">
-                                            <p class="text-muted mb-0"><?php echo $row['id_categoria'] ?></p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <div class="ms-3">
-                                            <p class="text-muted mb-0"><?php echo $row['nombre'] ?></p>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>

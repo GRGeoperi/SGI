@@ -66,7 +66,6 @@ include("includes/headerAdmin.php");
             </div>
             <thead class="bg-light">
                 <tr class="table-dark">
-                    <th>Identificador</th>
                     <th>Nombre producto</th>
                     <th>Presentación</th>
                     <th>Proveedor</th>
@@ -87,13 +86,6 @@ include("includes/headerAdmin.php");
                 $resultadoProductos = mysqli_query($conexion, $consultaTablaProducto);
                 while ($row = mysqli_fetch_array($resultadoProductos)) { ?>
                     <tr>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <div class="ms-3">
-                                    <p class="text-muted mb-0"><?php echo $row['id_producto'] ?></p>
-                                </div>
-                            </div>
-                        </td>
                         <td>
                             <div class="d-flex align-items-center">
                                 <div class="ms-3">

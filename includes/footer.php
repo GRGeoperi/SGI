@@ -16,17 +16,18 @@
                     <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
                         <h5 class="text-uppercase">Participantes:</h5>
                         <ol>
-                            <li>Geoperi González Roldán</li>
-                            <li>Uriel Martínez Hernández</li>
-                            <li>David Navarro Aguilar</li>
+                            <li>Bautista López Miguel Alejandro</li>
+                            <li>Bravo Rivera Alejandro</li>
+                            <li>Cornejo David Marco Antonio</li>
+                            <li>González Roldán Geoperi</li>
                         </ol>
                     </div>
                     <!-- Elementos a la derecha-->
                     <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
                         <h5 class="text-uppercase">Descripción:</h5>
                         <p>
-                            Proyecto final para la materia de Tecnologías para el
-                            Desarrollo de Aplicaciones Web
+                            Proyecto final para la materia de Formulación y 
+                            Evaluación de Proyectos Informáticos
                         </p>
                     </div>
                 </div>
