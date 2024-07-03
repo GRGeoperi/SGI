@@ -69,7 +69,7 @@ if ($datosRecibidos) {
                                 <a class="dropdown-item" href="admin.php">Administrar usuarios</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="paginas_relacionadas.php">Administrar páginas accesibles</a>
+                                <a class="dropdown-item" href="paginas_relacionadas.php">Seguridad y control de acceso</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider" />
@@ -79,6 +79,24 @@ if ($datosRecibidos) {
                             </li>
                             <li>
                                 <a class="dropdown-item" href="productos.php">Administrar productos</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="">Productos más vendidos</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="">Historial de ventas</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="">Exportar informe de ventas</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="">Tendencias de los clientes</a>
                             </li>
                         </ul>
                     </li>

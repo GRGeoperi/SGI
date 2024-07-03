@@ -69,6 +69,9 @@ if ($datosRecibidos) {
                                 <a class="dropdown-item" href="">Visualizar inventario</a>
                             </li>
                             <li>
+                                <a class="dropdown-item" href="">Registrar cliente</a>
+                            </li>
+                            <li>
                                 <a class="dropdown-item" href="">Realizar venta</a>
                             </li>
                         </ul>
