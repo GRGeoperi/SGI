@@ -44,7 +44,7 @@ include("includes/header.php");
             <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
 
                 <div class="card-body px-5 py-4 px-md-4">
-                    <img src="/experimentando/src/inv.png" height="450" alt="ejemplo inventario" loading="lazy" />
+                    <img src="/experimentando/src/SGI.jpeg" height="450" alt="ejemplo inventario" loading="lazy" />
                 </div>
             </div>
         </div>

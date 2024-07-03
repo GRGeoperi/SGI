@@ -32,7 +32,7 @@ include("includes/header.php");
                     <div class="card-body p-5 text-center">
                         <?php
                         if (isset($_SESSION['message'])) { ?>
-                            <div class="alert alert- <?= $_SESSION['message_type']; ?> alert-dismissible fade show" role="alert">
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <?=
                                 $_SESSION['message'];
                                 ?>

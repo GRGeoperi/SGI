@@ -36,9 +36,21 @@ include("includes/headerAdmin.php");
                 </div>
             <?php }
             unset($_SESSION['message']) ?>
-            <div class="container py-3">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="container px-4 py-1 px-md-1 text-center text-lg-start my-1">
+                <div class="row gx-lg-1 align-items-center mb-3">
+                    <div class="col-lg-3 mb-1 mb-lg-0" style="z-index: 10">
+                        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                            <div class="card-body text-center">
+                                <p class="fw-bold mb-1">
+                                    Añadir categoría
+                                </p>
+                                <a href="add_category.php">
+                                    <img src="/experimentando/src/add.png" alt="añadir">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-1 mb-lg-0 position-relative" style="z-index: 10">
                         <div class="card bg-dark text-white" style="border-radius: 1rem;">
                             <div class="card-body text-center">
                                 <p class="fw-bold mb-1">

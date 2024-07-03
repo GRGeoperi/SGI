@@ -58,9 +58,6 @@ if ($datosRecibidos) {
             <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
                 <!-- Left links -->
                 <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
                     <!-- Navbar dropdown -->
                     <li class="nav-item dropdown">
                         <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
@@ -76,9 +73,6 @@ if ($datosRecibidos) {
                             </li>
                             <li>
                                 <hr class="dropdown-divider" />
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="categorias.php">Administrar categorías</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="proveedores.php">Administrar proveedores</a>
