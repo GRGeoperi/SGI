@@ -66,13 +66,16 @@ if ($datosRecibidos) {
                         <!-- Dropdown menu -->
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="">Visualizar inventario</a>
+                                <a class="dropdown-item" href="seller.php">Visualizar inventario</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="">Registrar cliente</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="">Realizar venta</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="">Contactar al administrador</a>
                             </li>
                         </ul>
                     </li>
@@ -103,10 +106,12 @@ if ($datosRecibidos) {
         // Initialization for ES Users
         import {
             Dropdown,
+            Ripple,
             initMDB
         } from "mdb-ui-kit";
 
         initMDB({
-            Dropdown
+            Dropdown,
+            Ripple
         });
     </script>
